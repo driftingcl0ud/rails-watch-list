@@ -1,3 +1,12 @@
+<div class="card-movie">
+  <img src="https://d279m997dpfwgl.cloudfront.net/wp/2020/12/GettyImages-1150049038-1000x630.jpg" />
+  <div class="card-movie-infos">
+    <div class="cover mb-4 d-flex align-items-center justify-content-center">
+      <h2>SAVE ANY KIND OF MOVIES</h2>
+    </div>
+    
+  </div>
+</div>
 <div class="cover mb-4 d-flex align-items-center justify-content-center">
   <div class="text-center text-black">
     <h1>MOVIES</h1>
@@ -7,13 +16,13 @@
 <div class="container py-5">
   <div class="d-flex align-items-center justify-content-between mb-3">
     <h3 class="mb-0">My Lists</h3>
-    <%= link_to 'Create a movie list', new_list_path, class: 'btn btn-flat' %>
+    <%= link_to 'Create a movie list', new_list_path, class: 'btn btn-ghost' %>
   </div>
   <div class="row">
     <% @lists.each do |list| %>
       <div class="co-12 colsm-6 col-md-4 mb-3">
         <%= link_to list_path(list), class:'text-decoration-none' do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('list_background.jpg') %>)">
+          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) %>)">
             <%= list.name %>
           </div>
         <% end %>
